@@ -1,0 +1,63 @@
+<html>
+</html>
+<head>
+   <link rel="icon" href="favicon.ico">
+   <title>Insert Records </title>
+  <style type="text/css">
+    h1{
+      border: 1px dashed;
+    width:200px;
+    }
+
+   h4
+   {
+    height: 0px;
+    border-style: none;
+   }
+
+  </style>
+</head>
+<body bgcolor="#CDF0EA">
+
+  <center><h1> FORM_FOR_YOUR_REGISTRATION PROCESS</h1>
+    <table>
+  <form action="Data.php" name="myform" onsubmit="return validateForm()" method="post" >
+  <tr><th><p> <label >YOUR_Name:</label></th><td>
+  <input type="text" name="firstname"  required> </p></td></th><br>
+  <tr></tr>
+  <tr><th><p> <label >Last_Name:</label></th><td>
+  <input type="text" name="lastname"   required> </p></td></th><br>
+    <tr></tr>
+  <tr><th><p> <label >email:</label></th><td>
+  <input type="text"  name="email_address"  required> </p></td></th><br>
+    <tr></tr>
+ <tr><th> <p> <label >password:</label></th><td>
+    <input type="password" name ="password" required></td></th><br>
+      <tr></tr>
+   <tr><th> <p> <label >Retype_Password:</label
+      ></th><td> <input type="password" name ="rpassword"  required></td></th><br>
+        <tr></tr>
+     <tr><th> <p> <label >photo:</label></th><td>
+       <input type="file" name="pic" required><br></td></th><br>
+
+
+       <tr></tr>
+  <tr><th></th><td><input type="submit" value="Submit_all-data"> </td></tr>
+
+</form> </table></center>
+<script>
+
+  function validateForm()
+  {
+
+    var x=document.forms["myform"]["password"].value;
+    var y=document.forms["myform"]["rpassword"].value;
+    if(x!=y)
+    {
+      alert(" Both password and confirm password is not same");
+    return false;
+    }
+  }
+</script>
+</body>
+</html>
